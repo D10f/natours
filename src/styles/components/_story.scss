@@ -2,7 +2,7 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: $shadow;
-  background-color: $color-white;
+  background-color: rgba($color-white, 0.75); // opacity due to bg video
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;

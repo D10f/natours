@@ -11,6 +11,19 @@
 .medium-margin-top {
   @include margin-top(5rem);
 }
+.small-margin-top {
+  @include margin-top(2rem);
+}
+
+.large-padding-top {
+  @include padding-top(7.5rem);
+}
+.medium-padding-top {
+  @include padding-top(5rem);
+}
+.small-padding-top {
+  @include padding-top(2rem);
+}
 
 .large-margin-bottom {
   @include margin-bottom(7.5rem);
@@ -22,8 +35,27 @@
   @include margin-bottom(2rem);
 }
 
+.large-padding-bottom {
+  @include padding-bottom(7.5rem);
+}
+.medium-padding-bottom {
+  @include padding-bottom(5rem);
+}
+.small-padding-bottom {
+  @include padding-bottom(2rem);
+}
+.small-padding {
+  @include padding(2rem);
+}
+.small-padding-left {
+  @include padding-left(2rem);
+}
+
 .is-centered {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.is-right {
+  text-align: right;
 }

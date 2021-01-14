@@ -22,3 +22,6 @@
 @mixin padding-left($padding) {
   padding-left: $padding;
 }
+@mixin padding($padding) {
+  padding: $padding;
+}
