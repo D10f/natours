@@ -1,0 +1,63 @@
+.primary-headline {
+  color: $color-white;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  backface-visibility: hidden;  /* This fixes a slight "shake" on animations */
+
+  &--title {
+    font-size: 3.75rem;
+    font-weight: 400;
+    padding-left: 1.5rem;
+    letter-spacing: 3.3rem;
+    display: inline-block;
+    animation: moveInLeft 1s ease-out;
+  }
+
+  &--subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1.4rem;
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+.section-header {
+  text-align: center;
+
+  &__headline {
+    display: inline-block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: transform 0.2s ease;
+
+    // /* Achieve linear gradient color on the text */
+    // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    // background-clip: text;
+    // color: transparent;
+
+    &:hover {
+      transform: skewY(2deg) skewX(-15deg) scale(1.1);
+      text-shadow: .5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+
+  &:not(:last-child) {
+    @include margin-bottom(2.5rem);
+  }
+}

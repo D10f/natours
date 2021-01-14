@@ -1,0 +1,149 @@
+.card {
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  /* A fixed height is required since this element's height collapses and it
+  causes issues with mouse hover */
+
+  &__side {
+    height: 25rem;
+    transition: transform 0.75s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: $shadow;
+
+    &--front {
+      background-color: $color-light-gray;
+    }
+
+    &--back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(180deg);
+      color: $color-white;
+
+      &-1 { background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark); }
+      &-2 { background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark); }
+      &-3 { background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark); }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__heading {
+    position: relative;
+    height: 40%;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: right;
+    position: absolute;
+    width: 75%;
+    top: 10rem;
+    right: 2rem;
+
+    &--text {
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-white;
+      box-decoration-break: clone;
+      padding: 1rem 0.5rem;
+
+      &-1 {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.75),
+        rgba($color-secondary-dark, 0.75)
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.75),
+        rgba($color-primary-dark, 0.75)
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.75),
+        rgba($color-tertiary-dark, 0.75)
+        );
+      }
+    }
+  }
+
+  &__picture {
+    height: 100%;
+    background-size: cover;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &--1 {
+      background-image:
+        linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+        url(../assets/img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image:
+        linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+        url(../assets/img/nat-6.jpg);
+    }
+
+    &--3 {
+      background-image:
+        linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+        url(../assets/img/nat-7.jpg);
+    }
+  }
+
+  &__details {
+    padding-top: 5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__item {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray;
+    }
+  }
+
+  /* BACK OF THE CARD */
+
+  &__only {
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: 6rem;
+    font-family: sans-serif;
+    font-weight: 100;
+  }
+}

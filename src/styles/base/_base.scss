@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Fonts are inherited by default. By setting the font-family at the body which
+is the parent element for all other elements, is more efficient and shorter.
+*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-dark-gray;
+  padding: 1.9rem;
+  box-sizing: border-box;
+
+  // REMOVE!!
+  padding-bottom: 100rem;
+}
+
+ul {
+  list-style: none;
+}

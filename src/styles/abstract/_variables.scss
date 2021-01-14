@@ -1,0 +1,33 @@
+
+/* COLORS */
+
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-gray: #eee;
+$color-dark-gray: #777;
+$color-light-gray: #f7f7f7;
+$color-white: #fff;
+$color-black: #000;
+
+/* TYPOGRAPHY */
+
+$default-font-size: 1,6rem;
+
+/* GRID SYSTEM*/
+
+$max-width: 100rem;
+$column-gap: 2rem;
+$column-gap-3: 3rem;
+$column-gap-4: 4rem;
+
+/* EFFECTS */
+
+$shadow: 0 1.5rem 3rem rgba($color-black, .2);

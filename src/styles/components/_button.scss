@@ -1,0 +1,90 @@
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+  border: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .2s;
+  position: relative;
+  @include margin-top(2rem);
+
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+  }
+
+  /* Fade to infinity effect */
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    z-index: -1;
+    transition: transform .4s, opacity .4s;
+  }
+
+  &:hover::after {
+    transform: scaleX(1.4) scaleY(2);
+    opacity: 0;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: #333;
+  }
+
+  &--green {
+    background-color: $color-primary-dark;
+    color: $color-white;
+  }
+
+  &--white::after {
+    background-color: $color-white;
+  }
+  &--green::after {
+    background-color: $color-primary-dark;
+  }
+
+  &--animated {
+    animation: moveInBottom .75s ease-out .25s;
+    animation-fill-mode: backwards; /* This applies the properties of the animation at 0% before animation starts*/
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1.4rem;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    position: relative;
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $color-light-gray;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+}

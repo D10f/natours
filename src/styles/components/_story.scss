@@ -1,0 +1,71 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: $shadow;
+  background-color: $color-white;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  transform: skewX(-10deg);
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  /*
+  This won't work right now because the image already uses a transform
+  property and cannot be stacked. Instead write them separately for each
+  element that needs to be skewed back to correct position.
+  & > * {
+    transform: skewX(10deg);
+  }
+  */
+
+  &__shape {
+    /*
+    Shape outside requires the element to be floated and have width and
+    height dimensions specified
+    */
+    width: 14rem;
+    height: 14rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+  }
+
+  &__thumbnail {
+    height: 100%;
+    transform: translateX(-3rem) scale(1.2);
+    transition: transform 0.4s ease;
+  }
+
+  &__caption {
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: all 0.2s ease;
+    opacity: 0
+  }
+
+  &__header {
+    transform: skewX(12deg);
+  }
+
+  &:hover &__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__thumbnail {
+    transform: translateX(-3rem) scale(1);
+    filter: blur(2px) brightness(80%);
+  }
+}
