@@ -1,0 +1,147 @@
+.navigation {
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .navigation__background {
+      transform: scale(55);
+    }
+
+    &:checked ~ .navigation__menu {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: rgba($color-white, 0.8);
+    z-index: 120;
+    box-shadow: $shadow;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__background {
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    z-index: 100;
+    transition: transform 0.4s cubic-bezier(.15,.83,.59,1.03);
+  }
+
+  &__menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-1000%, -50%);
+    z-index: 110;
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.3s ease-in-out;
+  }
+
+  &__item {
+    margin: 1rem;
+    padding: 0 0.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 111;
+
+    &:hover .navigation__link {
+      color: $color-primary-dark;
+      transform: translateX(1rem);
+    }
+
+    &:hover::before {
+      transform: translateX(-60%);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 250%;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    position: inherit; // this will make the letters stand out over list::after
+    padding: 0 1rem;
+    font-size: 3rem;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+    transition: all 0.2s ease-in;
+  }
+
+  /* HAMBURGER MENU EFFECTS */
+
+  &__icon {
+    position: relative;
+    top: 2.25rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2px;
+      background-color: $color-dark-gray;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: transform 0.2s ease;
+    }
+
+    &::before {
+      top: -0.7rem;
+    }
+
+    &::after {
+      bottom: -0.7rem;
+    }
+  }
+
+  &__button:hover .navigation__icon::before {
+    transform: translateY(-.2rem);
+  }
+
+  &__button:hover .navigation__icon::after {
+    transform: translateY(.2rem);
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(45deg) translate(0.5rem, 0.5rem);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-45deg) translate(0.5rem, -0.48rem);
+  }
+}

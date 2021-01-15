@@ -1,6 +1,5 @@
 node_modules/
 dist/
-
 README.MD
 
 # Reference ignore lists from:
@@ -95,4 +94,3 @@ out
 .Trashes
 ehthumbs.db
 Thumbs.db
-
