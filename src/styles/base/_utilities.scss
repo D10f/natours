@@ -4,7 +4,22 @@
   background-clip: text;
   color: transparent;
 }
-
+.is-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.is-right {
+  text-align: right;
+}
+.is-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marginless {
+  margin: 0 !important;
+}
 .large-margin-top {
   @include margin-top(7.5rem);
 }
@@ -49,13 +64,4 @@
 }
 .small-padding-left {
   @include padding-left(2rem);
-}
-
-.is-centered {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.is-right {
-  text-align: right;
 }

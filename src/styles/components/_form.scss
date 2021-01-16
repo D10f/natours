@@ -4,12 +4,11 @@
   &__group {
     display: flex;
     flex-direction: column;
-
-    &:not(:last-child) {
-      margin-bottom: 2rem;
+    
+    &--horizontal {
+      flex-direction: row;
+      justify-content: space-between;
     }
-
-    &--radio {}
   }
 
   &__label {

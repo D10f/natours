@@ -21,9 +21,7 @@ body {
   color: $color-dark-gray;
   padding: 1.9rem;
   box-sizing: border-box;
-
-  // REMOVE!!
-  // padding-bottom: 100rem;
+  scroll-behavior: smooth;
 }
 
 ul {
