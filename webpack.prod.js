@@ -81,5 +81,10 @@ module.exports = {
     new HTMLWebpackPlugin({ template: './src/index.html' }),
     new miniCSSExtractPlugin({ filename: "[name].[hash].css"}),
     new CleanWebpackPlugin()
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 };
