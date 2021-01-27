@@ -8,6 +8,10 @@
   box-shadow: $shadow;
   transition: transform 0.2s ease-in-out;
 
+  @include responsive(tablet-port) {
+    width: 75%;
+  }
+
   &:hover {
     transform: translateY(-1rem) scale(1.1);
   }

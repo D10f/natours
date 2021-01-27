@@ -20,6 +20,14 @@
 .marginless {
   margin: 0 !important;
 }
+.paddingless {
+  padding: 0 !important;
+}
+.paddingless-on-tablet {
+  @include responsive(tablet-port){
+    padding: 0 !important;
+  }
+}
 .fullwidth{
   width: 100%;
 }

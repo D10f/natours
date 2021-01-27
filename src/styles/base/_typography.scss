@@ -76,6 +76,13 @@
     column-gap: 2rem;
     column-rule: 1px solid $color-gray;
     hyphens: auto;
+
+    @include responsive(phone) {
+      column-count: 1;
+      column-gap: 0;
+      padding-right: 2rem;
+      hyphens: none;
+    }
   }
 
   &:not(:last-child) {

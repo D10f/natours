@@ -26,6 +26,16 @@
     background: $color-white;
     transition: transform .2s .3s;
     transform: translate(-50%, -50%) scale(0);
+
+    @include responsive(tablet-port) {
+      // max-height: min-content;
+      width: 90%;
+      min-height: 50%;
+    }
+
+    @include responsive(phone) {
+      padding: 1rem 0;
+    }
   }
 
   &__image-box {
