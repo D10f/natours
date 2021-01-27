@@ -28,6 +28,16 @@
     &:hover {
       cursor: pointer;
     }
+
+    @include responsive(tablet-land) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include responsive(phone){
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -40,6 +50,16 @@
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 100;
     transition: transform 0.8s cubic-bezier(.15,.83,.59,1.03);
+
+    @include responsive(tablet-land) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include responsive(phone){
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__menu {
@@ -51,6 +71,10 @@
     text-align: center;
     opacity: 0;
     transition: transform 0.8s cubic-bezier(.18,.89,.32,1.28), opacity 0.6s ease;
+
+    @include responsive(phone) {
+      width: 100%;
+    }
   }
 
   &__item {
@@ -91,6 +115,10 @@
     text-transform: uppercase;
     color: $color-white;
     transition: all 0.2s ease-in;
+
+    @include responsive(phone) {
+      font-size: 2.7rem;
+    }
   }
 
   /* HAMBURGER MENU EFFECTS */

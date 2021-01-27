@@ -7,6 +7,17 @@
   /* A fixed height is required since this element's height collapses and it
   causes issues with mouse hover */
 
+  @include responsive(tablet-port) {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+  }
+
+  @include responsive(tablet-port) {
+    width: 80%;
+  }
+
   &__side {
     height: 25rem;
     transition: transform 0.75s ease;
@@ -20,8 +31,21 @@
     border-radius: 3px;
     box-shadow: $shadow;
 
+    @include responsive(tablet-port) {
+      height: auto;
+      position: relative;
+      display: block;
+      backface-visibility: visible;
+      overflow: auto;
+    }
+
     &--front {
       background-color: $color-light-gray;
+
+      @include responsive(tablet-port) {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &--back {
@@ -32,6 +56,13 @@
       transform: rotateY(180deg);
       color: $color-white;
 
+      @include responsive(tablet-port) {
+        top: -5rem;
+        padding: 5rem 0;
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+
       &-1 { background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark); }
       &-2 { background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark); }
       &-3 { background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark); }
@@ -40,9 +71,17 @@
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
+
+    @include responsive(tablet-port){
+      transform: rotateY(0);
+    }
   }
   &:hover &__side--back {
     transform: rotateY(0);
+
+    @include responsive(tablet-port){
+      transform: rotateY(0);
+    }
   }
 
   &__heading {
@@ -99,6 +138,10 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
+    @include responsive(tablet-port) {
+      height: 20rem;
+    }
+
     &--1 {
       background-image:
         linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
@@ -122,6 +165,10 @@
     padding-top: 5rem;
     width: 80%;
     margin: 0 auto;
+
+    @include responsive(tablet-port) {
+      padding: 5rem 0;
+    }
   }
 
   &__item {
@@ -136,6 +183,13 @@
 
   /* BACK OF THE CARD */
 
+  &__cta {
+    @include responsive(tablet-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   &__only {
     font-size: 1.6rem;
     text-align: center;
@@ -146,5 +200,9 @@
     font-size: 6rem;
     font-family: sans-serif;
     font-weight: 100;
+
+    @include responsive(tablet-port) {
+      font-size: 4rem;
+    }
   }
 }

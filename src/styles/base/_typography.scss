@@ -15,6 +15,11 @@
     letter-spacing: 3.3rem;
     display: inline-block;
     animation: moveInLeft 1s ease-out;
+
+    @include responsive(phone) {
+      letter-spacing: 1rem;
+      font-size: 3rem;
+    }
   }
 
   &--subtitle {
@@ -22,6 +27,10 @@
     font-weight: 700;
     letter-spacing: 1.4rem;
     animation: moveInRight 1s ease-out;
+
+    @include responsive(phone) {
+      letter-spacing: .4rem;
+    }
   }
 }
 
@@ -36,14 +45,19 @@
     letter-spacing: 2px;
     transition: transform 0.2s ease;
 
-    // /* Achieve linear gradient color on the text */
-    // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    // background-clip: text;
-    // color: transparent;
-
     &:hover {
       transform: skewY(2deg) skewX(-15deg) scale(1.1);
       text-shadow: .5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    @include responsive(tablet-port) {
+      // letter-spacing: 0;
+      font-size: 2.4rem;
+    }
+
+    @include responsive(phone) {
+      letter-spacing: 0;
+      font-size: 2.1rem;
     }
   }
 }

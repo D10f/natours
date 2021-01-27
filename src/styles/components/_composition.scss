@@ -2,6 +2,15 @@
   position: relative;
   width: 100%;
 
+  @include responsive(phone) {
+    position: static;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__photo {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
@@ -9,21 +18,44 @@
     position: absolute;
     z-index: 10;
     transition: transform 0.2s ease-out;
-    // outline: 0.75rem solid transparent;
+
+    @include responsive(tablet-port) {
+      width: 40%;
+    }
+
+    @include responsive(phone) {
+      position: static;
+      width: 100%;
+    }
 
     &--p1 {
       top: -2rem;
       left: 0;
+
+      @include responsive(tablet-port) {
+        top: 4rem;
+        left: 4rem;
+      }
     }
 
     &--p2 {
       top: 2rem;
       right: -1rem;
+
+      @include responsive(tablet-port) {
+        top: 4rem;
+        right: 4rem;
+      }
     }
 
     &--p3 {
       top: 12rem;
       left: 10rem;
+
+      @include responsive(tablet-port) {
+        top: 15rem;
+        left: 30%;
+      }
     }
 
     &:hover {

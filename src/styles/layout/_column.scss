@@ -11,6 +11,15 @@
   &--gap-4 { gap: 4rem; }
   &--gap-5 { gap: 5rem; }
 
+  @include responsive(tablet-port) {
+    flex-direction: column;
+    max-width: $max-width-tablet-port;
+  }
+
+  @include responsive(phone) {
+    max-width: $max-width-phone;
+  }
+
   .column {
     display: flex;
     flex-direction: column;
@@ -27,7 +36,7 @@
       justify-content: center;
       align-items: flex-end;
     }
-    
+
     &--bot {
       justify-content: flex-end;
       align-items: center;

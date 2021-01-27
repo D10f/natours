@@ -7,7 +7,11 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px; 10 / 16 = 62.5%
+
+  @include responsive(tablet-land)  { font-size: 56.25%; } // 1rem = 9px
+  @include responsive(tablet-port)  { font-size: 50%;    } // 1rem = 8px
+  @include responsive(big-desktop)  { font-size: 75%;    } // 1rem = 12px
 }
 
 /* Fonts are inherited by default. By setting the font-family at the body which
@@ -18,13 +22,14 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
+  padding: 2rem;
   color: $color-dark-gray;
-  // padding: 1.9rem;
   box-sizing: border-box;
   scroll-behavior: smooth;
 
-  // remove!!!!!
-  padding-bottom: 100rem;
+  @include responsive(tablet-port) {
+    padding: 0;
+  }
 }
 
 ul {

@@ -2,6 +2,14 @@
   background-color: $color-light-gray;
   padding: 15rem 0;
   margin-top: -15vh;
+
+  @include responsive(tablet-port){
+    padding: 15rem 0 50rem 0;
+  }
+
+  @include responsive(phone){
+    padding: 15rem 2rem 10rem 2rem;
+  }
 }
 
 .section-features {
@@ -17,17 +25,29 @@
   & > * {
     transform: skewY(5deg);
   }
+
+  @include responsive(phone){
+    padding: 15rem 2rem;
+  }
 }
 
 .section-tours {
   background-color: $color-light-gray;
   padding: 15rem 0 20rem 0;
   margin-top: -6rem;
+
+  @include responsive(phone) {
+    padding: 15rem 2rem 20rem 2rem;
+  }
 }
 
 .section-stories {
   position: relative;
   padding: 10rem 0 15rem 0;
+
+  @include responsive(phone){
+    padding: 10rem 2rem 15rem 2rem;
+  }
 }
 
 .section-contact {

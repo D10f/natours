@@ -8,6 +8,11 @@
   padding-left: 9rem;
   transform: skewX(-10deg);
 
+  @include responsive(phone) {
+    width: 100%;
+    transform: skewX(0);
+  }
+
   &:not(:last-child) {
     margin-bottom: 5rem;
   }
@@ -33,6 +38,10 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+
+    @include responsive(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__thumbnail {
@@ -56,6 +65,10 @@
 
   &__header {
     transform: skewX(12deg);
+
+    @include responsive(phone) {
+      transform: skewX(0);
+    }
   }
 
   &:hover &__caption {

@@ -20,6 +20,9 @@
 .marginless {
   margin: 0 !important;
 }
+.fullwidth{
+  width: 100%;
+}
 .large-margin-top {
   @include margin-top(7.5rem);
 }
@@ -48,6 +51,9 @@
 }
 .small-margin-bottom {
   @include margin-bottom(2rem);
+  @include responsive(phone) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .large-padding-bottom {
