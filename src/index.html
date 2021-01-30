@@ -60,9 +60,24 @@
 
         <aside class="column">
           <div class="composition">
-            <img src="../assets/img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--p1">
-            <img src="../assets/img/nat-2-large.jpg" alt="photo 2" class="composition__photo composition__photo--p2">
-            <img src="../assets/img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--p3">
+            <img
+              srcset="../assets/img/nat-1.jpg 300w, ../assets/img/nat-1-large.jpg 1000w"
+              sizes="(max-width: 900px) 26vw, (max-width: 600px) 80vw, 300px"
+              src="../assets/img/nat-1-large.jpg"
+              alt="photo 1"
+              class="composition__photo composition__photo--p1">
+            <img
+              srcset="../assets/img/nat-2.jpg 300w, ../assets/img/nat-2-large.jpg 1000w"
+              sizes="(max-width: 900px) 26vw, (max-width: 600px) 80vw, 300px"
+              src="../assets/img/nat-2-large.jpg"
+              alt="photo 2"
+              class="composition__photo composition__photo--p2">
+            <img
+              srcset="../assets/img/nat-3.jpg 300w, ../assets/img/nat-3-large.jpg 1000w"
+              sizes="(max-width: 900px) 26vw, (max-width: 600px) 80vw, 300px"
+              src="../assets/img/nat-3-large.jpg"
+              alt="photo 3"
+              class="composition__photo composition__photo--p3">
           </div>
         </aside>
       </div>
@@ -221,7 +236,12 @@
             <div class="column">
               <article class="story">
                 <figure class="story__shape">
-                  <img class="story__thumbnail" src="../assets/img/nat-8.jpg" alt="">
+                  <img
+                    srcset="../assets/img/nat-8-small.jpg 200w, ../assets/img/nat-8.jpg 2000w"
+                    sizes="(max-width: 600px) 33vw, (max-width: 900px) 22vw, 258px"
+                    src="../assets/img/nat-8.jpg"
+                    alt=""
+                    class="story__thumbnail">
                   <figcaption class="story__caption">Mary Smith</figcaption>
                 </figure>
                 <header class="story__header">
@@ -232,7 +252,12 @@
 
               <article class="story">
                 <figure class="story__shape">
-                  <img class="story__thumbnail" src="../assets/img/nat-9.jpg" alt="">
+                  <img
+                    srcset="../assets/img/nat-9-small.jpg 200w, ../assets/img/nat-9.jpg 2000w"
+                    sizes="(max-width: 600px) 33vw, (max-width: 900px) 22vw, 258px"
+                    src="../assets/img/nat-9.jpg"
+                    alt=""
+                    class="story__thumbnail" >
                   <figcaption class="story__caption">Jack Wilson</figcaption>
                 </figure>
                 <header class="story__header">
@@ -298,7 +323,14 @@
 
       <footer class="footer">
         <picture class="footer__logo-box medium-margin-bottom">
-          <img class="footer__logo-img" src="../assets/img/logo-green-2x.png" alt="Full Logo">
+          <source
+            srcset="../assets/img/logo-green-small-1x.png 1x, ../assets/img/logo-green-small-2x.png 2x"
+            media="(max-width: 600px)">
+          <img
+            srcset="../assets/img/logo-green-1x.png 1x, ../assets/img/logo-green-2x.png 2x"
+            src="../assets/img/logo-green-2x.png"
+            class="footer__logo-img"
+            alt="Full Logo">
         </picture>
 
         <div class="row row--gap-5">

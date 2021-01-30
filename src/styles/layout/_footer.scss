@@ -10,6 +10,10 @@
 
   &__logo-img {
     height: 10rem;
+
+    @include responsive(phone){
+      height: auto;
+    }
   }
 
   &__navigation {
