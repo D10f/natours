@@ -43,8 +43,8 @@
 
   <main>
     <section class="section-about">
-      <header class="section-header has-background">
-        <h2 class="section-header__headline medium-margin-bottom">Exciting tours for adventurous people</h2>
+      <header class="section-header">
+        <h2 class="section-header__headline has-background medium-margin-bottom">Exciting tours for adventurous people</h2>
       </header>
 
       <div class="row medium-margin-top">
@@ -119,8 +119,8 @@
 
     <section class="section-tours" id="section-tours">
 
-      <header class="section-header has-background">
-        <h2 class="section-header__headline large-margin-bottom">Most Popular Tours</h2>
+      <header class="section-header">
+        <h2 class="section-header__headline has-background large-margin-bottom">Most Popular Tours</h2>
       </header>
 
       <div class="row row--gap-4">
@@ -220,8 +220,8 @@
     </section>
 
     <section class="section-stories">
-      <header class="section-header has-background">
-        <h2 class="section-header__headline large-margin-bottom">We Make People Genuinely Happy</h2>
+      <header class="section-header">
+        <h2 class="section-header__headline has-background large-margin-bottom">We Make People Genuinely Happy</h2>
       </header>
 
       <aside class="background-video">
@@ -358,33 +358,27 @@
       <aside class="modal" id="modal">
         <a class="modal__close" href="#section-tours">&times;</a>
         <article class="modal__content">
+          <div class="modal__images">
+            <picture class="modal__image-box">
+              <img class="modal__image" src="../assets/img/nat-8.jpg">
+            </picture>
 
-          <div class="row row--horizontal paddingless-on-tablet marginless">
-            <div class="column row--horizontal column--third column--hide-on-small">
-
-              <picture class="modal__image-box">
-                <img class="modal__image" src="../assets/img/nat-8.jpg">
-              </picture>
-
-              <picture class="modal__image-box">
-                <img class="modal__image" src="../assets/img/nat-9.jpg">
-              </picture>
-
-            </div>
-
-            <div class="column column--left small-padding-left">
-
-              <header class="section-header small-margin-bottom">
-                <h2 class="section-header__headline has-background">Start Booking Now</h2>
-              </header>
-              <h3 class="heading-tertiary small-padding-bottom">Important &ndash; Please read the terms and conditions first</h3>
-              <p class="paragraph paragraph--wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <button class="btn btn--green">Book now</button>
-
-            </div>
+            <picture class="modal__image-box">
+              <img class="modal__image" src="../assets/img/nat-9.jpg">
+            </picture>
           </div>
+
+          <header class="section-header modal__header">
+            <h2 class="section-header__headline has-background">Start Booking Now</h2>
+          </header>
+
+          <h3 class="heading-tertiary modal__title">Important &ndash; Please read the terms and conditions first</h3>
+
+          <p class="paragraph paragraph--wrap modal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          <button class="btn btn--green modal__btn">Book now</button>
         </article>
       </aside>
 
-    </body>
-    </html>
+  </body>
+</html>

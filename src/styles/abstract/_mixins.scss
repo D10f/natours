@@ -2,6 +2,7 @@
  *  MEDIA QUERY REFERENCE
  *  | Breakpoint     | Pixels |  Em   |
  *  |----------------|--------|-------|
+ *  | Narrow         | < 400  | 35    |
  *  | Phone          | < 600  | 37.5  |
  *  | Tablet-port    | < 900  | 56.25 |
  *  | Tablet-land    | < 1200 | 75    |
@@ -13,6 +14,7 @@
 **/
 
 @mixin responsive($breakpoint) {
+  @if $breakpoint == narrow       { @media (max-width: 35em)    { @content }; }
   @if $breakpoint == phone        { @media (max-width: 37.5em)  { @content }; }
   @if $breakpoint == tablet-port  { @media (max-width: 56.25em) { @content }; }
   @if $breakpoint == tablet-land  { @media (max-width: 75em)    { @content }; }
